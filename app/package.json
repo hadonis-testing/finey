@@ -5,7 +5,8 @@
 	"scripts": {
 		"prepare": "cd .. && husky app/.husky",
 		"lint-staged": "lint-staged",
-		"start": "expo start"
+		"start": "expo start",
+		"build": "tsc"
 	},
 	"dependencies": {
 		"expo": "51.0.39",

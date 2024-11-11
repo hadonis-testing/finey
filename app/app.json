@@ -1,0 +1,31 @@
+{
+	"expo": {
+		"name": "finey",
+		"slug": "finey",
+		"scheme": "finey",
+		"description": "finey = fish + money",
+		"version": "0.1.0",
+		"owner": "hardingadonis",
+		"orientation": "portrait",
+		"githubUrl": "https://github.com/hardingadonis/finey",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff00"
+			},
+			"package": "io.hardingadonis.finey"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "05b45286-73e2-45fc-bccd-b32d4d040816"
+			}
+		}
+	}
+}

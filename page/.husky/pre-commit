@@ -1,0 +1,1 @@
+cd page && yarn lint-staged

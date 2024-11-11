@@ -21,6 +21,11 @@
 				"backgroundColor": "#ffffff00"
 			},
 			"package": "io.hardingadonis.finey"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "05b45286-73e2-45fc-bccd-b32d4d040816"
+			}
 		}
 	}
 }

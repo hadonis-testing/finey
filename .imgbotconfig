@@ -1,0 +1,6 @@
+{
+	"schedule": "daily",
+	"ignoredFiles": ["./imgs/icon.svg", "./app/assets", "./page/public"],
+	"compressWiki": "false",
+	"minKBReduced": 0
+}

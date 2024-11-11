@@ -1,6 +1,7 @@
 {
 	"name": "finey",
-	"version": "1.0.0",
+	"version": "0.1.0",
+	"description": "finey = fish + money",
 	"main": "expo/AppEntry.js",
 	"scripts": {
 		"prepare": "cd .. && husky app/.husky",

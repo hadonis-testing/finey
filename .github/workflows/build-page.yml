@@ -1,0 +1,30 @@
+name: Build page
+
+on:
+  push:
+    paths:
+      - page/**
+
+jobs:
+  build:
+    name: Build page
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.17.0
+
+      - name: Install dependencies
+        run: |
+          cd page
+          yarn
+
+      - name: Build page
+        run: |
+          cd page
+          yarn build

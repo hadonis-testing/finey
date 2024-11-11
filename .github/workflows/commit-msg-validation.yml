@@ -1,0 +1,36 @@
+name: Commit message validation
+
+on:
+  push:
+    branches:
+      - feature/*
+
+jobs:
+  validate:
+    name: Validate commit messages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.17.0
+
+      - name: Install yarn
+        run: |
+          npm i -g yarn
+
+      - name: Install dependencies
+        run: |
+          yarn add -D --exact @commitlint/cli@19.5.0 @commitlint/config-conventional@19.5.0
+
+      - name: Copy commitlint configuration
+        run: |
+          cp app/commitlint.config.js commitlint.config.js
+
+      - name: Validate commit messages
+        run: |
+          yarn commitlint --last --verbose

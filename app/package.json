@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"main": "expo/AppEntry.js",
 	"scripts": {
+		"prepare": "cd .. && husky app/.husky",
 		"start": "expo start"
 	},
 	"dependencies": {
@@ -16,6 +17,7 @@
 		"@babel/plugin-proposal-decorators": "7.25.9",
 		"@trivago/prettier-plugin-sort-imports": "4.3.0",
 		"@types/react": "18.2.79",
+		"husky": "9.1.6",
 		"prettier": "3.3.3",
 		"typescript": "5.3.3"
 	},

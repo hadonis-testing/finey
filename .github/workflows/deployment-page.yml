@@ -40,12 +40,12 @@ jobs:
           npm install -g yarn
 
       - name: Install dependencies
-        working-directory: github-page
+        working-directory: page
         run: |
           yarn
 
       - name: Build
-        working-directory: github-page
+        working-directory: page
         run: |
           yarn build
 

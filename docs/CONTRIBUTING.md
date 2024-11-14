@@ -23,7 +23,7 @@
   - You can download it from [here](https://code.visualstudio.com/).
 - Dev tools: `Expo Go`
   - You can download it from [here](https://expo.dev/go).
-  - Please choose `SDK 51`
+  - Please choose `SDK 52`
 
 ### Extensions
 

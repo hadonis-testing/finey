@@ -10,6 +10,7 @@
 		"githubUrl": "https://github.com/hardingadonis/finey",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
 		"splash": {
 			"image": "./assets/splash.png",
 			"resizeMode": "contain",

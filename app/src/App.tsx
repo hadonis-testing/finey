@@ -1,14 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Button, PaperProvider, Text } from 'react-native-paper';
 
-export default function App() {
+const App = () => {
 	return (
-		<View style={styles.container}>
-			<Text>Open up App.tsx to start working on your app!</Text>
-			<StatusBar style={'auto'} animated={true} translucent={true} />
-		</View>
+		<PaperProvider>
+			<View style={styles.container}>
+				<Text>Open up App.tsx to start working on your app!</Text>
+				<Button
+					icon="camera"
+					mode="contained"
+					onPress={() => console.log('Pressed')}
+				>
+					Press me
+				</Button>
+				<StatusBar style={'auto'} animated={true} translucent={true} />
+			</View>
+		</PaperProvider>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -18,3 +28,5 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 });
+
+export default App;

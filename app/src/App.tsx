@@ -11,6 +11,7 @@ const App = () => {
 					icon="camera"
 					mode="contained"
 					onPress={() => console.log('Pressed')}
+					style={styles.button}
 				>
 					Press me
 				</Button>
@@ -26,6 +27,9 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+	button: {
+		marginVertical: 10,
 	},
 });
 

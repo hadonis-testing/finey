@@ -1,0 +1,77 @@
+name: Release app with EAS
+
+on:
+  workflow_run:
+    workflows: [Build app]
+    types:
+      - completed
+    branches:
+      - main
+    paths:
+      - app/**
+
+jobs:
+  release:
+    name: Release app
+
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.17.0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Expo
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          cd app
+          yarn install --frozen-lockfile
+
+      - name: Get version
+        id: get_version
+        run: |
+          sudo apt-get install jq
+          chmod +x ./scripts/get-version.sh
+          echo "version=$(./scripts/get-version.sh ./app/package.json)" >> $GITHUB_OUTPUT
+
+      - name: Build app for Android
+        run: |
+          cd app
+          eas build --platform android --profile production --local --output ${{ github.workspace }}/finey-release-v${{ steps.get_version.outputs.version }}.apk
+
+      - name: GH Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: finey-release-v${{ steps.get_version.outputs.version }}
+          tag_name: ${{ steps.get_version.outputs.version }}
+          file: |
+            finey-release-v${{ steps.get_version.outputs.version }}
+
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+
+    steps:
+      - run: echo 'The `Build app` workflow failed'

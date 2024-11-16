@@ -14,7 +14,8 @@
 		"production": {
 			"android": {
 				"buildType": "apk",
-				"gradleCommand": ":app:assembleRelease"
+				"gradleCommand": ":app:assembleRelease",
+				"image": "sdk-52"
 			},
 			"node": "20.17.0",
 			"autoIncrement": true

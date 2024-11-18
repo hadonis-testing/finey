@@ -14,7 +14,7 @@
 
 ### Tools
 
-- Environment: `Node.js v20.17.0`
+- Environment: `Node.js v18.18.0`
   - You can download it from [here](https://nodejs.org/en/download/).
 - Package manager: `yarn`
   - To install it, run `npm i -g yarn` after installing Node.js.

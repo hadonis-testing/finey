@@ -1,10 +1,10 @@
 {
 	"expo": {
-		"name": "finey",
+		"name": "Finey",
 		"slug": "finey",
 		"scheme": "finey",
 		"description": "finey = fish + money",
-		"version": "0.0.1",
+		"version": "0.0.2",
 		"owner": "hardingadonis",
 		"orientation": "portrait",
 		"githubUrl": "https://github.com/hardingadonis/finey",

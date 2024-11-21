@@ -1,4 +1,4 @@
-# finey
+# Finey
 
 ![GitHub contributors](https://img.shields.io/github/contributors/hardingadonis/finey)
 ![GitHub top language](https://img.shields.io/github/languages/top/hardingadonis/finey)
@@ -6,7 +6,7 @@
 ![GitHub License](https://img.shields.io/github/license/hardingadonis/finey)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hardingadonis_finey&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=hardingadonis_finey)
 
-> finey is an app for managing personal finances, built with React Native.
+> Finey is an app for managing personal finances, built with React Native.
 
 Home page: [hardingadonis.github.io/finey](https://hardingadonis.github.io/finey)
 

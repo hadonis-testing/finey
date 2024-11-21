@@ -1,8 +1,8 @@
-# finey's Development Guidelines
+# Finey's Development Guidelines
 
 ## Table of Contents
 
-- [finey's Development Guidelines](#fineys-development-guidelines)
+- [Finey's Development Guidelines](#fineys-development-guidelines)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
     - [Tools](#tools)

@@ -59,16 +59,16 @@ jobs:
       - name: Build app for Android
         run: |
           cd app
-          eas build --platform android --profile production --local --output ${{ github.workspace }}/finey-release-v${{ steps.get_version.outputs.version }}.apk
+          eas build --platform android --profile production --local --output ${{ github.workspace }}/Finey-v${{ steps.get_version.outputs.version }}.apk
 
       - name: GH Release
         uses: softprops/action-gh-release@v2
         with:
-          name: finey-release-v${{ steps.get_version.outputs.version }}
+          name: Finey-v${{ steps.get_version.outputs.version }}
           tag_name: ${{ steps.get_version.outputs.version }}
           generate_release_notes: true
           files: |
-            finey-release-v${{ steps.get_version.outputs.version }}.apk
+            Finey-v${{ steps.get_version.outputs.version }}.apk
 
   on-failure:
     name: On failure

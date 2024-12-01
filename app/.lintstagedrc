@@ -1,5 +1,0 @@
-{
-	"src/**/*.ts": ["yarn prettier --write \"./src/**/*.ts\""],
-	"src/**/*.tsx": ["yarn prettier --write \"./src/**/*.tsx\""],
-	"Main.ts": ["yarn prettier --write Main.ts"]
-}

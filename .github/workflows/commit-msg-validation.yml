@@ -29,7 +29,7 @@ jobs:
 
       - name: Copy commitlint configuration
         run: |
-          cp app/commitlint.config.js commitlint.config.js
+          cp page/commitlint.config.cjs commitlint.config.cjs
 
       - name: Validate commit messages
         run: |

@@ -14,17 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
         with:
-          node-version: 18.18.0
+          distribution: temurin
+          java-version: 17
 
-      - name: Install dependencies
-        run: |
-          cd app
-          yarn
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Build app
         run: |
           cd app
-          yarn build
+          sudo ./gradlew --no-daemon build

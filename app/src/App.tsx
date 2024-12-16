@@ -1,22 +1,20 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { Button, PaperProvider, Text } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import RootNavigator from '@/navigation/RootNavigator';
 
 const App = () => {
 	return (
 		<PaperProvider>
-			<View style={styles.container}>
-				<Text>Open up App.tsx to start working on your app!</Text>
-				<Button
-					icon="camera"
-					mode="contained"
-					onPress={() => console.log('Pressed')}
-					style={styles.button}
-				>
-					Press me
-				</Button>
+			<NavigationContainer>
+				<SafeAreaView style={styles.container}>
+					<RootNavigator />
+				</SafeAreaView>
 				<StatusBar style={'auto'} animated={true} translucent={true} />
-			</View>
+			</NavigationContainer>
 		</PaperProvider>
 	);
 };
@@ -25,11 +23,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	button: {
-		marginVertical: 10,
 	},
 });
 
